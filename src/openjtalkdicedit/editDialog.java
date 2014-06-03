@@ -6,6 +6,8 @@
 
 package openjtalkdicedit;
 
+import com.ibm.icu.text.Transliterator;
+
 /**
  *
  * @author user
@@ -118,6 +120,12 @@ public static String editStr = "";
         });
 
         jLabel8.setText("発音");
+
+        text8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                text8ActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("アクセント");
 
@@ -262,8 +270,17 @@ public static String editStr = "";
     }//GEN-LAST:event_text1ActionPerformed
 
     private void text7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text7ActionPerformed
+        //ひらがな→カタカナ変換
+        Transliterator tr = Transliterator.getInstance("Hiragana-Katakana");
+        text7.setText(tr.transform(text7.getText()));
         text8.setText(text7.getText());
     }//GEN-LAST:event_text7ActionPerformed
+
+    private void text8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text8ActionPerformed
+        //ひらがな→カタカナ変換
+        Transliterator tr = Transliterator.getInstance("Hiragana-Katakana");
+        text8.setText(tr.transform(text8.getText()));
+    }//GEN-LAST:event_text8ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -179,7 +179,7 @@ editDialog edt = new editDialog(this, true);
         });
         jScrollPane1.setViewportView(listCSV);
 
-        textFileName.setText("/home/user/tool/voiceLinux/OpenJTalk/Dict/mecab-naist-jdic-0.6.3b-20111013/naist-jdic.csv");
+        textFileName.setText("/home/user/tool/voiceLinux/OpenJTalk/open_jtalk-1.07/mecab-naist-jdic/naist-jdic.csv");
         textFileName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFileNameActionPerformed(evt);
