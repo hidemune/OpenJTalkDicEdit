@@ -299,7 +299,7 @@ editDialog edt = new editDialog(this, true);
     private void listFindValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_listFindValueChanged
         int i = listFind.getSelectedIndex();
         if (i >= 0) {
-            int idx = (int) arrFind.get(i);
+            int idx = (Integer) arrFind.get(i);
             listCSV.setSelectedIndex(idx);
             System.out.println(idx);
             listCSV.ensureIndexIsVisible(idx);
