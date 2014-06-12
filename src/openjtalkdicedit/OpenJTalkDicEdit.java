@@ -17,6 +17,8 @@ public class OpenJTalkDicEdit {
      */
     public static void main(String[] args) {
         MainFrame frm = new MainFrame();
+        //frm.csvFilename = args[0];
+        frm.readFile(args[0]);
         frm.setVisible(true);
     }
     

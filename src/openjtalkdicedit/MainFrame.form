@@ -98,9 +98,6 @@
       </SubComponents>
     </Container>
     <Component class="javax.swing.JTextField" name="textFileName">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="/home/user/tool/voiceLinux/OpenJTalk/open_jtalk-1.07/mecab-naist-jdic/naist-jdic.csv"/>
-      </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFileNameActionPerformed"/>
       </Events>

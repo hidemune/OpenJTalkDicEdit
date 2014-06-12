@@ -32,6 +32,7 @@ public class MainFrame extends javax.swing.JFrame {
 public ArrayList arrFind = new ArrayList();
 JViewport viewL;
 editDialog edt = new editDialog(this, true);
+//String csvFilename = "";
 
     /**
      * Creates new form MainFrame
@@ -41,9 +42,10 @@ editDialog edt = new editDialog(this, true);
         listCSV.setModel(new DefaultListModel());
         listFind.setModel(new DefaultListModel());
         viewL = jScrollPane1.getViewport();
-        readFile();
+        //readFile();
     }
-    public void readFile() {
+    public void readFile(String csvFile) {
+        textFileName.setText(csvFile);
         try{
             InputStreamReader f = new InputStreamReader(new FileInputStream(textFileName.getText()), "euc-jp");
             BufferedReader b = new BufferedReader(f);
@@ -179,7 +181,6 @@ editDialog edt = new editDialog(this, true);
         });
         jScrollPane1.setViewportView(listCSV);
 
-        textFileName.setText("/home/user/tool/voiceLinux/OpenJTalk/open_jtalk-1.07/mecab-naist-jdic/naist-jdic.csv");
         textFileName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFileNameActionPerformed(evt);
